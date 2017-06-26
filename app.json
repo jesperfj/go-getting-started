@@ -9,7 +9,8 @@
   ],
   "env": {
     "DB_URL": {
-        "Description": "Optional DB URL"
+        "Description": "Optional DB URL",
+        "required": false
     }
   },
   "image": "heroku/go:1.6",
