@@ -7,6 +7,11 @@
     "sample",
     "example"
   ],
+  "env": [
+    "DB_URL": {
+        "Description": "Optional DB URL"
+    }
+  ],
   "image": "heroku/go:1.6",
   "mount_dir": "src/github.com/heroku/go-getting-started",
   "website": "http://github.com/heroku/go-getting-started",
