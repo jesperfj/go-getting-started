@@ -44,7 +44,7 @@ func lookup(addr string) *IPAPIResponse {
 
 func main() {
 	port := os.Getenv("PORT")
-
+	isKubernetes := os.Getenv("KUBERNETES_PORT") != ""
 	if port == "" {
 		log.Fatal("$PORT must be set")
 	}
@@ -68,7 +68,7 @@ func main() {
 		if loc.Region == "OR" {
 			intensity = "intense"
 		}
-		c.HTML(http.StatusOK, "index.tmpl.html", gin.H{"loc": loc, "intensity": intensity})
+		c.HTML(http.StatusOK, "index.tmpl.html", gin.H{"loc": loc, "intensity": intensity, "isKubernetes": isKubernetes})
 	})
 
 	router.Run(":" + port)
