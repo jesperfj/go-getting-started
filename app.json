@@ -7,6 +7,16 @@
     "sample",
     "example"
   ],
+  "env": {
+    "DB_URL": {
+        "Description": "Optional DB URL",
+        "required": false
+    },
+    "EC2_IP": {
+        "Description": "Optional EC2 instance IP",
+        "required": false
+    }    
+  },
   "image": "heroku/go:1.6",
   "mount_dir": "src/github.com/heroku/go-getting-started",
   "website": "http://github.com/heroku/go-getting-started",
