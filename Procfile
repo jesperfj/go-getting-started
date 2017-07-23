@@ -1,1 +1,1 @@
-web: intense-go
+web: sigsci/bin/sigsci-start intense-go
